@@ -29,7 +29,7 @@ class NavButton extends StatelessWidget {
           onTap(index);
         },
         child: Container(
-            height: 75.0,
+            height: 155.0,
             child: Transform.translate(
               offset: Offset(
                   0, difference < 1.0 / length ? verticalAlignment * 40 : 0),
@@ -39,9 +39,6 @@ class NavButton extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       child,
-                      SizedBox(
-                        height: 3,
-                      ),
                       Text(
                         title,
                         style: TextStyle(
