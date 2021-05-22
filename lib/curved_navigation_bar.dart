@@ -128,15 +128,7 @@ class CurvedNavigationBarState extends State<CurvedNavigationBar>
                         border: Border.all(
                             color: widget.buttonBackgroundColor ?? widget.color,
                             width: 5),
-                        gradient: LinearGradient(
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                          stops: [0.05, 1],
-                          colors: [
-                            Color(0xFFF96289),
-                            Color(0xFF3F5EFB),
-                          ],
-                        ),
+                      color: Color(0xFF8AC185),
                       ),
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
