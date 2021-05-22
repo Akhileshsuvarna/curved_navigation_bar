@@ -32,7 +32,7 @@ class CurvedNavigationBar extends StatefulWidget {
     _LetIndexPage letIndexChange,
     this.animationCurve = Curves.easeOut,
     this.animationDuration = const Duration(milliseconds: 600),
-    this.height = 75.0,
+    this.height = 120.0,
   })  : letIndexChange = letIndexChange ?? ((_) => true),
         assert(items != null),
         assert(items.length >= 1),
@@ -99,7 +99,7 @@ class CurvedNavigationBarState extends State<CurvedNavigationBar>
     Size size = MediaQuery.of(context).size;
     return Container(
       color: widget.backgroundColor,
-      height: 120,
+      height: widget.height,
       child: Stack(
         clipBehavior: Clip.none,
         alignment: Alignment.bottomCenter,
