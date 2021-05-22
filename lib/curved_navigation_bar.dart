@@ -105,7 +105,7 @@ class CurvedNavigationBarState extends State<CurvedNavigationBar>
         alignment: Alignment.bottomCenter,
         children: <Widget>[
           Positioned(
-            bottom: -20 - (75.0 - widget.height),
+            bottom: -50 - (75.0 - widget.height),
             left: Directionality.of(context) == TextDirection.rtl
                 ? null
                 : _pos * size.width,
@@ -124,7 +124,7 @@ class CurvedNavigationBarState extends State<CurvedNavigationBar>
                   type: MaterialType.circle,
                   child: Container(
                      height: 75,
-                    width:25,
+                    width:45,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(50),
                       color: Color(0xFF8AC185),
