@@ -32,7 +32,7 @@ class CurvedNavigationBar extends StatefulWidget {
     _LetIndexPage letIndexChange,
     this.animationCurve = Curves.easeOut,
     this.animationDuration = const Duration(milliseconds: 600),
-    this.height = 120.0,
+    this.height = 75.0,
   })  : letIndexChange = letIndexChange ?? ((_) => true),
         assert(items != null),
         assert(items.length >= 1),
@@ -123,6 +123,7 @@ class CurvedNavigationBarState extends State<CurvedNavigationBar>
                   color: widget.buttonBackgroundColor ?? widget.color,
                   type: MaterialType.circle,
                   child: Container(
+                     height: 100,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(50),
                       color: Color(0xFF8AC185),
