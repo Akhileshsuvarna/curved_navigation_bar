@@ -99,7 +99,7 @@ class CurvedNavigationBarState extends State<CurvedNavigationBar>
     Size size = MediaQuery.of(context).size;
     return Container(
       color: widget.backgroundColor,
-      height: widget.height,
+      height: 120,
       child: Stack(
         clipBehavior: Clip.none,
         alignment: Alignment.bottomCenter,
@@ -143,7 +143,7 @@ class CurvedNavigationBarState extends State<CurvedNavigationBar>
               painter: NavCustomPainter(
                   _pos, _length, widget.color, Directionality.of(context)),
               child: Container(
-                height: 125.0,
+                height: 75.0,
               ),
             ),
           ),
