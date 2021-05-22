@@ -123,7 +123,7 @@ class CurvedNavigationBarState extends State<CurvedNavigationBar>
                   color: widget.buttonBackgroundColor ?? widget.color,
                   type: MaterialType.circle,
                   child: Container(
-                     height: 100,
+                     height: 75,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(50),
                       color: Color(0xFF8AC185),
