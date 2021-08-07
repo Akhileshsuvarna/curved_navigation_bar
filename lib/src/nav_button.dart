@@ -29,15 +29,7 @@ class NavButton extends StatelessWidget {
           onTap(index);
         },
         child: Container(
-            decoration: BoxDecoration(
-          borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(24),
-          topRight: Radius.circular(24),
-        ),
-            border: Border.all(
-                          color: Color(0xFFEBECEE),
-                            width: 1),),
-            height: 75.0,
+            height: 70.0,
             child: Transform.translate(
               offset: Offset(
                   0, difference < 1.0 / length ? verticalAlignment * 40 : 0),
