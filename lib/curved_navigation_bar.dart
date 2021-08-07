@@ -98,12 +98,6 @@ class CurvedNavigationBarState extends State<CurvedNavigationBar>
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      
-      decoration: BoxDecoration(
-         borderRadius:BorderRadius.only(
-          topLeft: Radius.circular(24),
-          topRight: Radius.circular(24),
-        )),
       color: widget.backgroundColor,
       height: widget.height,
       child: Stack(
