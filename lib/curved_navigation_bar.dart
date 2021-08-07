@@ -104,7 +104,7 @@ class CurvedNavigationBarState extends State<CurvedNavigationBar>
         clipBehavior: Clip.none,
         alignment: Alignment.bottomCenter,
         children: <Widget>[  
-            Container(
+        Container(
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(20),
@@ -114,7 +114,19 @@ class CurvedNavigationBarState extends State<CurvedNavigationBar>
                            color: Color(0xFFEBECEE),
                             width: 1),
       ),
-      child:
+      child:Positioned(
+        left: 0,
+        right: 0,
+        bottom: 0 - (75.0 - widget.height),
+        child: CustomPaint(
+          painter: NavCustomPainter(
+              _pos, _length, widget.color, Directionality.of(context)),
+          child: Container(
+            height: 75.0,
+          ),
+        ),
+      ),
+    ),
      Positioned(
             bottom: -40 - (75.0 - widget.height),
             left: Directionality.of(context) == TextDirection.rtl
@@ -149,30 +161,9 @@ class CurvedNavigationBarState extends State<CurvedNavigationBar>
                       )),
                 ),
               ),
-            ),),  ),  
-      Container(
-      decoration: BoxDecoration(
-        borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(20),
-          topRight: Radius.circular(20),
-        ),
-              border: Border.all(
-                           color: Color(0xFFEBECEE),
-                            width: 1),
-      ),
-      child:Positioned(
-        left: 0,
-        right: 0,
-        bottom: 0 - (75.0 - widget.height),
-        child: CustomPaint(
-          painter: NavCustomPainter(
-              _pos, _length, widget.color, Directionality.of(context)),
-          child: Container(
-            height: 75.0,
-          ),
-        ),
-      ),
-    ),
+            ),
+          ),  
+     
          Positioned(
             left: 0,
             right: 0,
