@@ -104,47 +104,7 @@ class CurvedNavigationBarState extends State<CurvedNavigationBar>
         clipBehavior: Clip.none,
         alignment: Alignment.bottomCenter,
         children: <Widget>[
-           Positioned(
-            left: 0,
-            right: 0,
-            bottom: 0 - (75.0 - widget.height),
-            child: SizedBox(
-                height: 100.0,
-                child: Row(
-                    children: widget.items.map((item) {
-                  return NavButton(
-                    onTap: _buttonTap,
-                    position: _pos,
-                    length: _length,
-                    index: widget.items.indexOf(item),
-                    child: Center(child: item),
-                    title: widget.itemsName[widget.items.indexOf(item)],
-                  );
-                }).toList())),
-          ),
-           Container(
-      decoration: BoxDecoration(
-        borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(20),
-          topRight: Radius.circular(20),
-        ),
-              border: Border.all(
-                           color: Color(0xFFEBECEE),
-                            width: 1),
-      ),
-      child: Positioned(
-        left: 0,
-        right: 0,
-        bottom: 0 - (75.0 - widget.height),
-        child: CustomPaint(
-          painter: NavCustomPainter(
-              _pos, _length, widget.color, Directionality.of(context)),
-          child: Container(
-            height: 75.0,
-          ),
-        ),
-      ),
-    ),
+         
            Container(
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.only(
@@ -191,8 +151,36 @@ class CurvedNavigationBarState extends State<CurvedNavigationBar>
               ),
             ),
           ),
-),
-         
+), Positioned(
+        left: 0,
+        right: 0,
+        bottom: 0 - (75.0 - widget.height),
+        child: CustomPaint(
+          painter: NavCustomPainter(
+              _pos, _length, widget.color, Directionality.of(context)),
+          child: Container(
+            height: 75.0,
+          ),
+        ),
+      ),
+         Positioned(
+            left: 0,
+            right: 0,
+            bottom: 0 - (75.0 - widget.height),
+            child: SizedBox(
+                height: 100.0,
+                child: Row(
+                    children: widget.items.map((item) {
+                  return NavButton(
+                    onTap: _buttonTap,
+                    position: _pos,
+                    length: _length,
+                    index: widget.items.indexOf(item),
+                    child: Center(child: item),
+                    title: widget.itemsName[widget.items.indexOf(item)],
+                  );
+                }).toList())),
+          ), 
         ],
       ),
     );
