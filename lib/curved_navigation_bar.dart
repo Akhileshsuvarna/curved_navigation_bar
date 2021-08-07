@@ -103,9 +103,7 @@ class CurvedNavigationBarState extends State<CurvedNavigationBar>
          borderRadius:BorderRadius.only(
           topLeft: Radius.circular(24),
           topRight: Radius.circular(24),
-        ), border: Border.all(
-                            color:  Color(0xFFD6D8DD).withOpacity(0.3),
-                              width: 1)),
+        )),
       color: widget.backgroundColor,
       height: widget.height,
       child: Stack(
