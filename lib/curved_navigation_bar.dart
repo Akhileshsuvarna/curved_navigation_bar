@@ -146,6 +146,9 @@ class CurvedNavigationBarState extends State<CurvedNavigationBar>
           topLeft: Radius.circular(24),
           topRight: Radius.circular(24),
         ),
+              border: Border.all(
+                            color: Colors.red,
+                            width: 5),
       ),
       child: Positioned(
         left: 0,
