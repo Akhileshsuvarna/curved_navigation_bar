@@ -127,9 +127,7 @@ class CurvedNavigationBarState extends State<CurvedNavigationBar>
         ),
       ),
         ),
-             Container(
-           color: Colors.transparent,
-      child:
+          
      Positioned(
             bottom: -40 - (75.0 - widget.height),
             left: Directionality.of(context) == TextDirection.rtl
@@ -165,7 +163,7 @@ class CurvedNavigationBarState extends State<CurvedNavigationBar>
                 ),
               ),
             ),
-          ),        ),
+          ),    
          Positioned(
             left: 0,
             right: 0,
