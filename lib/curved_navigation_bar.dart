@@ -103,19 +103,8 @@ class CurvedNavigationBarState extends State<CurvedNavigationBar>
       child: Stack(
         clipBehavior: Clip.none,
         alignment: Alignment.bottomCenter,
-        children: <Widget>[
-         
-           Container(
-      decoration: BoxDecoration(
-        borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(20),
-          topRight: Radius.circular(20),
-        ),
-              border: Border.all(
-                           color: Color(0xFFEBECEE),
-                            width: 1),
-      ),
-      child: Positioned(
+        children: <Widget>[         
+     Positioned(
             bottom: -40 - (75.0 - widget.height),
             left: Directionality.of(context) == TextDirection.rtl
                 ? null
@@ -149,9 +138,18 @@ class CurvedNavigationBarState extends State<CurvedNavigationBar>
                       )),
                 ),
               ),
-            ),
-          ),
-), Positioned(
+            ),),  
+      Container(
+      decoration: BoxDecoration(
+        borderRadius: const BorderRadius.only(
+          topLeft: Radius.circular(20),
+          topRight: Radius.circular(20),
+        ),
+              border: Border.all(
+                           color: Color(0xFFEBECEE),
+                            width: 1),
+      ),
+      child:Positioned(
         left: 0,
         right: 0,
         bottom: 0 - (75.0 - widget.height),
@@ -163,6 +161,7 @@ class CurvedNavigationBarState extends State<CurvedNavigationBar>
           ),
         ),
       ),
+    ),
          Positioned(
             left: 0,
             right: 0,
