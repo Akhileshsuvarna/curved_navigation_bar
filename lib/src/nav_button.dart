@@ -35,8 +35,8 @@ class NavButton extends StatelessWidget {
           topRight: Radius.circular(24),
         ),
             border: Border.all(
-                            color: widget.buttonBackgroundColor ?? widget.color,
-                            width: 5),),
+                          color: Color(0xFFEBECEE),
+                            width: 1),),
             height: 75.0,
             child: Transform.translate(
               offset: Offset(
